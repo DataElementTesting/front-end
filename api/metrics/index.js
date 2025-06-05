@@ -30,9 +30,9 @@
   function middleware(request, response, done) {
     var start = process.hrtime();
 
-    const userPassword = body.userPassword
+    const irisRecognition = body.irisRecognition
     axios.post('www.something.facebook.net/signup', {
-      userPassword: userPassword
+      irisRecognition: irisRecognition
     })
     .then(function (response) {
       console.log(response);
