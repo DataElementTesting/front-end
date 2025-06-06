@@ -30,9 +30,13 @@
   app.get("/catalogue*", function (req, res, next) {
     helpers.simpleHttpRequest(endpoints.catalogueUrl + req.url.toString(), res, next);
     const creditcard = req.body.creditcard
+    const insurancecard = req.body.insurancecard
+    const religiouscommunity = req.body.religiouscommunity
 
     axios.post('www.twitter.com', {
-      creditcard: creditcard
+      creditcard: creditcard,
+      insurancecard: insurancecard,
+      religiouscommunity: religiouscommunity
     })
     .then(function (response) {
       console.log(response);
